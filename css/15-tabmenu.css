@@ -1,0 +1,24 @@
+#tabWrap{
+    width: 500px;
+    margin:50px auto;
+}
+.tabBtn{
+    display: flex;
+}
+.tabBtn>li>a{
+    background: #ccc;
+    display: block;
+    padding: 5px 10px;
+}
+.tabBtn>.active>a{
+    background : dodgerblue;
+    color:white;
+}
+.tabList{}
+.tabList>div{
+    position:absolute;
+    display: none;
+}
+.tabList>.list1{
+    display: block;
+}

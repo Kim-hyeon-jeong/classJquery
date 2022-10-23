@@ -1,0 +1,36 @@
+header{
+    border-bottom: 2px solid dodgerblue;
+    text-align: center;
+}
+.subBg{
+    position:absolute;
+    width:100%;
+    background:#eee;
+    height:200px;
+    top:100px;
+    display: none;
+}
+#nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+#nav>li{
+    padding: 0 50px;
+    position: relative;
+    padding-bottom: 38px;
+}
+#nav>li>a{
+    font-size: 18px;
+}
+.sub{
+    padding-top: 50px;
+    background-color: pink;
+    width:100%;
+    position: absolute;
+    top:60px;
+    left:0;
+    height:200px;
+    box-sizing: border-box;
+    /* display: none; */
+}

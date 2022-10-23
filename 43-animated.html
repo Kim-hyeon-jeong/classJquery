@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:50px;
+            height:50px;
+            background-color: pink;
+            margin:10px;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+    $(function(){ 
+        $("button:eq(1)").on("click",function(){
+            $(".box").animate({
+                "margin-left":"95%"
+            },5000)
+        })
+        //animate버튼을 클릭하면 box가 애니메이션중인지 아닌지를 console출력하기
+        $("button:eq(0)").click(function(){
+            var ani = $(".box").is(":animated");
+            console.log(ani);
+            //true: 애니메이션중 false: 애니메이션멈춤
+        })
+    })   
+    </script>
+</head>
+<body>
+    <button>animate</button>
+    <button>right</button>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            background-color: antiquewhite;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //h2 앞에 : prepend (h2안쪽에 붙여짐/ css의 before와 유사함)
+            $("h2").prepend("start");
+            //h2 뒤에 : append
+            $("h2").append("finish");
+        })
+    </script>
+</head>
+<body>
+    <h1>append, prepend</h1>
+    <h2>여기가 기준</h2>
+</body>
+</html>

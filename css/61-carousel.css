@@ -1,0 +1,53 @@
+.carouselWrap{
+    width:900px;
+    height:250px;
+    /* 부모를 찾아주기위해 높이값 준다 */
+    margin:0 auto;
+    background: skyblue;
+    position:relative;
+}
+.banner>li{
+    width:calc(100%/3);
+    padding:5px;
+    box-sizing: border-box;
+    position:absolute;
+}
+.banner>li img{
+    width:100%;
+}
+.banner>.banner1{
+    left:-600px;
+}
+.banner>.banner2{
+    left:-300px;
+}
+.banner>.banner3{
+    left:0;
+}
+.banner>.banner4{
+    left:300px;
+}
+.banner>.banner5{
+    left:600px;
+}
+.banner>.banner6{
+    left:900px;
+}
+.banner>.banner7{
+    left:1200px;
+}
+.banner>.banner8{
+    left:1500px;
+}
+.arrow>li{
+    position:absolute;
+    top:50%;
+    background: white;
+    padding:20px;
+}
+.arrow>.leftBtn{
+    left:0;
+}
+.arrow>.rightBtn{
+    right:0;
+}

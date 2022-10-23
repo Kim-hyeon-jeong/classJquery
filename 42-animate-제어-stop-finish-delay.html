@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:50px;
+            height:50px;
+            background-color: pink;
+            margin:10px;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("button:eq(0)").click(function(){
+                $("div").animate({
+                    "margin-left":"90%"
+                },10000)
+            })
+            
+            $("button:eq(1)").click(function(){
+                $(".box1").stop();
+            })
+
+            $("button:eq(2)").click(function(){
+                $(".box2").finish();
+            })
+            $("button:eq(3)").click(function(){
+                $(".box3").delay(2000); //delay버튼먼저 누르고 start하면
+                //2초뒤에 출발한다
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>start</button>
+    <button>stop</button>
+    <button>finish</button>
+    <button>delay</button>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

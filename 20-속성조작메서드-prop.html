@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $("input").prop("checked",true);
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>prop 속성</h1>
+    <p>checkbox, radio, enabled, disabled, selected</p>
+    <p>
+        <span>취미</span>
+        <label for="book">공부</label><input type="checkbox" id="book">
+        <label for="sleep">잠자기</label><input type="checkbox" id="sleep">
+        <label for="design">장판디자인</label><input type="checkbox" id="design">
+        <label for="active">운동</label><input type="checkbox" id="active">
+    </p>
+    <button>모두체크하기</button>
+</body>
+</html>

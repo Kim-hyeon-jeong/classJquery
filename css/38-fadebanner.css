@@ -1,0 +1,36 @@
+#mainBanner{
+    width:600px;
+    height: 360px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner>li{
+    position:absolute;
+    display: none;
+}
+.banner>li:first-child{
+    display: block;
+}
+.pager{
+    position:absolute;
+    display: flex;
+    bottom:30px;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%);
+}
+.pager>li{
+    margin: 0 5px;
+}
+.pager>li>a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: powderblue;
+    color:black;
+}
+.pager>li.active>a{
+    background: #000;
+    color:white;
+    
+}

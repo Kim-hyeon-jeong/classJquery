@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg1{
+            background-color: pink ;
+        }
+        .bg2{
+            background: skyblue;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //p 첫번째 click
+            // $("p:eq(0)").on("click",function(){
+            //     $(this).addClass("bg1")
+            // })
+            $("p:eq(0)").click(function(){
+                $(this).addClass("bg1")
+            })
+            //p 두번째 dbclick
+            $("p:eq(1)").click(function(){
+                $(this).addClass("bg2")
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>click</p>
+    <p>dbclick</p>
+</body>
+</html>

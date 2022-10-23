@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            display: none;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //h1숨겨진 속성을 가지는 요소를 찾아서 보여주기
+            //: 는 상태를 나타내는 앞에 씀
+            $("h1:hidden").css("display","block");
+
+            //option중에 선택된 요소의 value값을 콘솔에 출력
+            var myVal = $("option:selected").val();
+            console.log(myVal);
+
+            var inputVal = $("input:checked").val();
+            console.log(inputVal);
+
+            //form요소 선택자
+            $("input:text").css("border","5px solid pink");
+        })
+    </script>
+</head>
+<body>
+    <h1>보여질 제목</h1>
+    <h1 class="title">시원한 비</h1>
+    <select name="" id="">
+        <option value="파전">파전</option>
+        <option value="찌개">찌개</option>
+        <option value="막걸리" selected>막걸리</option>
+    </select>
+    <br>
+    <!-- label 자식으로 input주면 for id 안써도됨 -->
+    <label for=""><input type="checkbox" value="rain1"></label>
+    <label for=""><input type="checkbox" value="rain2" checked></label>
+    <label for=""><input type="checkbox" value="rain3"></label>
+    <br>
+    <input type="text">
+</body>
+</html>

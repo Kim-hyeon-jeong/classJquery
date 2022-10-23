@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg1{
+            background:pink;
+        }
+        .bg2{
+            background:blue;
+        }
+        .bg3{
+            background:green;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#uName").focusin(function(){
+                $(this).addClass("bg1")
+            })
+            $("#uName").focusout(function(){
+                $(this).removeClass("bg1")
+            })
+            $("#uId").focus(function(){
+                $(this).addClass("bg2")
+            })
+            $("#uId").blur(function(){
+                $(this).removeClass("bg2")
+            })
+            // 드래그
+            $("#uAdd").select(function(){
+                $(this).addClass("bg3")
+            })
+            $("#uAdd").blur(function(){
+                $(this).removeClass("bg3")
+            })
+            $("#uTel").change(function(e){
+                console.log(e);
+                console.log($(this).val());
+                console.log($(this).prop("selectedIndex"));
+            })
+            $("form").submit(function(){
+                alert("회원가입 축하합니다.")
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <h1>form</h1>
+    <form>
+        <p><label for="uName">이름<input type="text" id="uName"></label></p>
+        <p><label for="uId">아이디<input type="text" id="uId"></label></p>
+        <p><label for="uAdd">주소<input type="text" id="uAdd"></label></p>
+        <p><label for="uTel">전화
+            <select name="" id="uTel">
+                <option value="010">010</option>
+                <option value="016">016</option>
+                <option value="019">019</option>
+            </select>
+            <input type="text">
+            <input type="text">
+        </label>
+        </p>
+        <p><input type="submit" value="전송">
+            <input type="reset" value="취소">
+        </p>
+    </form>
+</body>
+</html>

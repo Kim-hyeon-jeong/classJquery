@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background: pink;
+            padding:30px;
+            font-size: 25px;
+        }
+        div>p{
+            padding:30px;
+            background: skyblue;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var count1=0;
+            var count2=0;
+            //자식은 내영역 아님
+            $(".enter").mouseenter(function(){
+                count2++;
+                $(".count2").text(count2)
+            })
+            //자식도 내영역임
+            $(".over").mouseover(function(){
+                count1++;
+                $(".count1").text(count1)
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>mouseover</h1>
+    <p>내 자식영역은 내 영역 아님~~</p>
+
+    <div class="over">
+        parent<span class="count1">0</span>
+        <p>child</p>
+    </div>
+
+    <h1>mouseenter</h1>
+    <p>내 자식~~</p>
+    <div class="enter">
+        parent<span class="count2">0</span>
+        <p>child</p>
+    </div>
+</body>
+</html>

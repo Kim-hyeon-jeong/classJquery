@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background:green;
+            font-size: 30px;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var wWidth = $(window).outerWidth();
+            $(".text").text(wWidth);
+            //실시간 화면 크기에 대한 정보를 받아옴
+            $(window).resize(function(){
+                var wWidth = $(window).outerWidth();
+            $(".text").text(wWidth);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="text">0</div>
+</body>
+</html>

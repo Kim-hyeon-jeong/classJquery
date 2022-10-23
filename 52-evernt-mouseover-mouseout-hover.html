@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: orange;
+        }
+        .bg1{
+            background-color: pink ;
+        }
+        .bg2{
+            background: skyblue;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //p 첫번째 click
+            // $("p:eq(0)").on("click",function(){
+            //     $(this).addClass("bg1")
+            // })
+            // $("p:eq(0)").mouseover(function(){
+            //     $(this).addClass("bg1")
+            // })
+            // $("p:eq(0)").mouseout(function(){
+            //     $(this).removeClass("bg1")
+            // })
+            $("p:eq(0)").on({
+                "mouseover":function(){
+                    $(this).addClass("bg1")
+                },
+                "mouseout":function(){
+                    $(this).removeClass("bg1")
+                }
+            })
+
+            //p 두번째 dbclick
+            $("p:eq(1)").hover(function(){
+                $(this).addClass("bg2")
+            },function(){
+                $(this).removeClass("bg2")
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>click</p>
+    <p>dbclick</p>
+</body>
+</html>

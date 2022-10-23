@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            background-color: antiquewhite;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //h2앞에 추가
+            $("h2").before("11111111111111");
+            //h2뒤에 추가
+            $("h2").after("000000000000111111111111111");
+        })
+    </script>
+</head>
+<body>
+    <h1>객체 편집 메서드 after-before</h1>
+    <p>가상으로 요소를 추가하고 싶을때-바깥에</p>
+
+    <h2>이곳이 기준!!!!!</h2>
+</body>
+</html>

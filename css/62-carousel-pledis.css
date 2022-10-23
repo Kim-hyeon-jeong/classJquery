@@ -1,0 +1,39 @@
+#videoWrap{
+    width:1280px;
+    margin:0 auto;
+    background-color: antiquewhite;
+    position:relative;
+    text-align: center;
+}
+.banner{
+    width:500%;
+    /* 두개씩 볼거기 때문에. 두개씩 100프로가 5번 */
+    margin-left:-25%;
+    position:relative;
+}
+.banner>li{
+    width:10%;
+    float: left;
+}
+.banner>li>div{
+    padding:30px 50px;
+    transition: 0.5s;
+}
+.banner>li.active>div{
+    padding:0;
+}
+.banner>li img{
+    width: 100%;
+}
+.arrow>li{
+    position:absolute;
+    bottom:0;
+    background: white;
+    padding:20px;
+}
+.arrow>.leftBtn{
+    left:0;
+}
+.arrow>.rightBtn{
+    right:0;
+}   

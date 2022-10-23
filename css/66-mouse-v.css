@@ -1,0 +1,26 @@
+#container>section{
+    height:100vh;
+    font-size: 100px;
+    color:white;
+}
+.box1{
+    background-color: aqua;
+}
+.box2{
+    background-color: burlywood;
+}
+.box3{
+    background-color: hotpink;
+}
+.box4{
+    background-color: aquamarine;
+}
+.box5{
+    background-color: dodgerblue;
+}
+.box6{
+    background-color: darkslateblue;
+}
+.box7{
+    background-color: darkseagreen;
+}

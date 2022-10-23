@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //.down
+            $(".down").on("keydown",function(){
+                $(this).css("background","pink");
+            })
+            $(".up").on("keyup",function(){
+                $(this).css("background","pink");
+            })
+            $(".press").on("keypress",function(e){
+                console.log(e.code,e.key,e.keyCode);
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>keydown</h1>
+    <input type="text" class="down">
+    <h1>keyup</h1>
+    <input type="text" class="up">
+    <h1>keypress</h1>
+    <input type="text" class="press">
+</body>
+</html>

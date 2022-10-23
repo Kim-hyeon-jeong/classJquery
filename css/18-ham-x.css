@@ -1,0 +1,42 @@
+body{
+    line-height: 3;
+    padding:100px;
+}
+.hamBtn2{}
+.hamBtn2>a{
+    display: block;
+    width:32px;
+    height:32px;
+    background-image: url(../images/ham2.png);
+}
+.hamBtn2>.active{
+    background-image: url(../images/close2.png);
+}
+
+.ham{
+
+}
+.ham>a{
+    display: block;
+    background-color: skyblue;
+}
+.ham>a>span{
+    display: block;
+    width:32px;
+    height:3px;
+    background: hotpink;
+    margin: 8px;px 0; 
+    /* 마진 안주면 뭉쳐진상태로보여 하나의 bar형태이다 */
+    transition:0.5s;
+}
+.ham>.active>span:first-child{
+    transform: rotate(45deg) translateY(11px) translateX(5px);
+    /* transform-origin: 0 0; */
+}
+.ham>.active>span:nth-child(2){
+    opacity:0;
+}
+.ham>.active>span:last-child{
+    transform: rotate(-45deg) translateY(-11px) translateX(5px);
+    /* transform-origin: 0 0; */
+}

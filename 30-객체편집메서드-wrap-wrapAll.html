@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background : hotpink;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //p를 div로 감싸기
+            // $("p").wrap("<div></div>")
+            //p를 전부 모아서 div로 감싸기
+            // $("p").wrapAll("<div></div>");
+            //h2안에 span태그로 감싸기
+            // $("h2").wrapInner("<span></span>");
+
+            //strong의 부모 제거하기
+            $("strong").unwrap();//strong을 감싼 p를 제거함
+        })
+    </script>
+</head>
+<body>
+    <h1>선택한 요소를 감싸거나, 부모를 제거할때 사용</h1>
+    
+    <h2>wrap</h2>
+    <p>각각의 요소를 감쌀때</p>
+
+    <h2>wrapAll</h2>
+    <p>요소를 모아서 한꺼번에 감쌀때</p>
+
+    <h2>wrapInner</h2>
+    <p>안쪽을 감쌀때</p>
+
+    <h2>unWrap</h2>
+    <p><strong>부모를 제거할때</strong></p>
+    <p><strong>1</strong></p>
+    <p><strong>2</strong></p>
+</body>
+</html>

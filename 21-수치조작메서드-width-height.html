@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background : pink;
+            width: 200px;
+            height:300px;
+            padding:30px 50px;
+            border: 10px solid black;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //width
+            var w = $(".box").width();
+            var iw=$(".box").innerWidth();
+            var ow=$(".box").outerWidth();
+            
+            var h = $(".box").height();
+            var ih=  $(".box").innerHeight();
+            var oh= $(".box").outerHeight();
+
+            $(".size>div:eq(0)").text(w);
+            $(".size>div:eq(1)").text(iw);
+            $(".size>div:eq(2)").text(ow);
+            
+            $(".size>div:eq(3)").text(h);
+            $(".size>div:eq(4)").text(ih);
+            $(".size>div:eq(5)").text(oh);
+        })
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="size">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

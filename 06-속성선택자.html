@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        //target 속성을 가지는 요소를 찾아서 배경
+        $("a[target]").css("background","green");
+        $("a[href ^='http']").css("border","1px solid black");//http로시작
+        $("a[href $='net']").css("font-size","30px");//net으로 끝
+        $("a[href *='kr']").css("color","pink");//kr 포함하는
+    })
+</script>
+<body>
+    <h1>속성선택자</h1>
+    <p><a href="http://naver.com" target="_blank">네이버</a></p>
+    <p><a href="google.com">구글</a></p>
+    <p><a href="http://daum.net">다음</a></p>
+    <p><a href="http://zum.com">줌</a></p>
+    <p><a href="home.co.kr">집으로~</a></p>
+</body>
+</html>

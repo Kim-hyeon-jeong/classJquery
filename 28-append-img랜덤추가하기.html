@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{border:10px solid black};
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                var rnd = Math.ceil(Math.random()*8); //1~8 정수
+                $("#wrap").append("<img src='images/_0" + rnd + "t.jpg'>");
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>이미지추가</button>
+    <div id="wrap"></div>
+    
+</body>
+</html>

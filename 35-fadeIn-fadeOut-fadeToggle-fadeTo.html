@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:400px;
+            height:250px;
+            background-color: pink;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("button:eq(1)").click(function(){
+                $(".box").fadeOut(1000);
+            })
+            $("button:eq(0)").click(function(){
+                $(".box").fadeIn(1000);
+            })
+            $("button:eq(2)").click(function(){
+                $(".box").fadeToggle(1000);
+            })
+            $("button:eq(3)").click(function(){
+                $(".box").fadeTo(1000,0.5); //(시간, 반투명도)
+            })
+        
+        })
+    </script>
+</head>
+<body>
+    <button>fadeIn</button>
+    <button>fadeOut</button>
+    <button>fadeToggle</button>
+    <button>fadeTo</button>
+    <div class="box"></div>
+</body>
+</html>

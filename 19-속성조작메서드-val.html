@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var uName = $("#uName").val();
+            console.log(uName);
+            $("#uId").val("파란하늘");
+        })
+    </script>
+</head>
+<body>
+    <h1>속성조작메서드 val</h1>
+    <p>form의 value값을 얻어오거나 변경할때</p>
+    <input type="text" value="홍길동" id="uName"><br>
+    <input type="text" id="uId">
+
+</body>
+</html>

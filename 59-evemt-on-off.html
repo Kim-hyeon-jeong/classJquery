@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg1{
+            background:pink;
+        }
+        .bg2{
+            background-color: blue;
+        }
+        .bg3{
+            background-color: green;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $(".box1").on("click",function(){
+                $(this).addClass("bg1")
+            })
+            $(".box2").on("mouseover focus",function(){
+                $(this).addClass("bg2")
+            })
+            $(".box3").on({
+                "click":function(){
+                    $(this).addClass("bg3")
+                },
+                "mouseover":function(){
+                    $(this).css("font-size","30px")
+                },
+                "mouseout":function(){
+                    $(this).css("font-size","16px")
+                }
+            })
+            $(".off").on("mouseover",function(){
+                $(this).addClass("bg1")
+            })
+            $("button").click(function(){
+                $(".off").off("mouseover");
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>event on</h1>
+    <p class="box1">등록</p>
+    <a href="#" class="box2">mouseover focus</a>
+    <p class="box3">click-bg, mouseover-글자크기, mouseout-크기정상</p>
+    <h1>event off</h1>
+
+    <p class="off">이벤트제거</p>
+    <button>제거</button>
+</body>
+</html>

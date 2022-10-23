@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg{
+            background : hotpink;
+            color : white;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //첫번째 버튼을 클릭하면 p에 bg클래스가 들어가도록
+            $("button:eq(0)").click(function(){
+                $("p").addClass("bg");
+            })
+            $("button:eq(1)").click(function(){
+                $("p").removeClass("bg");
+            })
+            $("button:eq(2)").click(function(){
+                $("p").toggleClass("bg");
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>addClass, removeClass, toggleClass</p>
+    <button>addClass</button>
+    <button>removeClass</button>
+    <button>toggleClass</button>
+</body>
+</html>

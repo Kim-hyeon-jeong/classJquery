@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var hTitle = $(".hTitle").html();
+            console.log(hTitle);
+            $(".hTitle").html("<em>태그도 함께 변경이 됩니다.</em>"); //태그가 적용됨 
+            $(".hTitle").text("<i>내용변경</i>")  //태그적용아닌 문자처럼 보여짐
+        })
+    </script>
+</head>
+<body>
+    <h1>속성조작메서드</h1>
+    <h2 class="hTitle">html</h2>
+    <p>h2에 들어있는 내용과 함께 태그도 변경하기</p>
+
+    <h2 class="tTitle">text</h2>
+    <p>h2의 내용만 변경하기</p>
+</body>
+</html>

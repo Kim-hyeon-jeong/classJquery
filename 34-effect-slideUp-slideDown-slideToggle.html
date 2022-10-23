@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:400px;
+            height:250px;
+            background-color: pink;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("button:eq(0)").click(function(){
+                $(".box").slideUp(1000); //slideUp, slideDown은 자주 쓰이는 효과이다
+            })
+            $("button:eq(1)").click(function(){
+                $(".box").slideDown(1000);
+            })
+            $("button:eq(2)").click(function(){
+                $(".box").stop().slideToggle(1000);//100번 연속으로 누르면 자동으로 움직이는걸 
+                //막아주는게 stop()의 역할이다
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>slideUp</button>
+    <button>slideDown</button>
+    <button>slideToggle</button>
+    <div class="box"></div>
+    
+</body>
+</html>

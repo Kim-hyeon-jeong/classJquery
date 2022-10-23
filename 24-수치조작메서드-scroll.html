@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .textBox {
+        width: 400px;
+        height: 300px;
+        overflow: auto;
+      }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function(){
+        var textHeight = $(".textBox>div").outerHeight();
+        console.log(textHeight);
+
+        //move버튼을 클릭하면 scroll의 위치가 아래로 스르르 이동
+        $("button").click(function(){
+            //$(".textBox").scrollTop(textHeight); //애니메이션은 없음
+            $(".textBox").stop().animate({
+                scrollTop:textHeight
+            },1000) //1초동안 
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <div class="textBox">
+      <div>
+        I don't know how we got this far 
+        시작은 우연히 시간은 거센 파도처럼
+        한숨에 밀려와 또 어김없이 찾아드는 가을 
+        낙엽 인사처럼 Sing with me Take
+        my hand 이 순간을 기억해 줘 Forever
+         You're my 찬란하게 반짝이는 Star
+        Star Star Sometimes it gets a lil 
+        tough 눈물도 아까운 순간들에 더 외로워
+        누군가 필요해 넌 내 마음을 흔들어놔 
+        쏟아지는 빗물처럼 You're love is a
+        blue will fade away 네 슬픔을 노래할게
+         Sing with me Take my hand 이
+        순간을 기억해 줘 Forever You're my 
+        찬란하게 반짝이는 Star 지나버린
+        순간에 아파하지 마 내가 있잖아 너의 
+        허전함 내가 채워줄래 One day I'll be
+        something 이 모습 아니더라도 Forever 
+        The light 눈 감으면 떠오를 거야
+        Star Star Star Star Star Star Star 
+        Star Star Star I don't know how we
+        got this far 시작은 우연히 시간은 거센
+         파도처럼 한숨에 밀려와 또
+        어김없이 찾아드는 가을 낙엽 인사처럼 Sing
+         with me Take my hand 이 순간을
+        기억해 줘 Forever You're my 찬란하게 
+        반짝이는 Star Star Star Sometimes
+        it gets a lil tough 눈물도 아까운 
+        순간들에 더 외로워 누군가 필요해 넌 내
+        마음을 흔들어놔 쏟아지는 빗물처럼 You're
+         love is a blue will fade away
+        네 슬픔을 노래할게 Sing with me Take my 
+        hand 이 순간을 기억해 줘 Forever
+        You're my 찬란하게 반짝이는 Star 지나버린
+         순간에 아파하지 마 내가 있잖아
+        너의 허전함 내가 채워줄래 One day I'll be
+         something 이 모습 아니더라도
+        Forever The light 눈 감으면 떠오를 거야 
+        Star Star Star Star
+      </div>
+    </div>
+    <button>move</button>
+  </body>
+</html>

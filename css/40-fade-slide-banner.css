@@ -1,0 +1,41 @@
+#bannerWrap{
+    width:600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.banner{
+    height:360px;
+    /* 높이없어지므로 압솔루트때문에 준다 헤이트 */
+}
+.banner>li{
+    position:absolute;
+    display: none;
+}
+.banner>li:first-child{
+    display: block;
+}
+.thum{
+    display: flex;
+    justify-content: space-between;
+    margin-top:10px;
+}
+.thum>.active>a{
+    opacity: 0.5;
+}
+.bg{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color: rgba(0,0,0,0.8);
+    z-index:10;
+    display: none;
+}
+.bigImg{
+    position:absolute;
+    width:900px;
+    /* 원래크기의 1.5배로 확대시켜서 */
+    height:540px;
+    background-color: white;
+    z-index: 100;
+    display: none;
+}

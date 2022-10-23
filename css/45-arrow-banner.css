@@ -1,0 +1,32 @@
+#mainBanner{
+    overflow: hidden;
+    position: relative;
+}
+.banner{
+    width:300%;
+    font-size:100px;
+}
+.banner>li{
+    float:left;
+    height:400px;
+    width:calc(100%/3);
+}
+.banner>.b1{
+    background-color: hotpink;
+}
+.banner>.b2{
+    background-color: dodgerblue;
+}
+.banner>.b3{
+    background-color: green;
+}
+.arrowWrap>li{
+    position: absolute;
+    top:50%;
+}
+.arrowWrap>li:first-child{
+    left:20px;
+}
+.arrowWrap>li:last-child{
+    right:20px;
+}

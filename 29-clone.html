@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //.list>li를 복사하여 ol뒤에 붙이기
+            var copyLi = $(".list>li").clone();
+            console.log(copyLi);
+            $("ol").append(copyLi);
+
+            //.banner>li첫번째를 복사 => 마지막에
+            var objFirst =$(".banner>li:first").clone();
+
+            //.banner>li마지막 복사 => 처음에
+            var objLast = $(".banner>li:last").clone();
+        //클론먼저하고 나중에 붙여넣기해야(프리펜드 어펜드) 1,2,3 순서 지켜짐
+        //클론하고 바로 붙여넣기하면 마지막거가 배너1번되어서 안된다
+            $(".banner").append(objFirst);
+            $(".banner").prepend(objLast);
+        })
+    </script>
+</head>
+<body>
+    <ul class="list">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul>
+    <ol>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+    </ol>
+    <ul class="banner">
+        <li>banner1</li>
+        <li>banner2</li>
+        <li>banner3</li>
+    </ul>
+</body>
+</html>

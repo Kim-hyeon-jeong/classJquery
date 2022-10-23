@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .banner{
+            width:300%;
+            height:500px;
+        }
+        .banner>li{
+            float: left;
+            width:calc(100%/3);
+            height:100%;
+            color:#fff;
+            font-size: 50px;
+        }
+        .banner>.banner1{
+            background-color: dodgerblue;
+        }
+        .banner>.banner2{
+            background-color: deeppink;
+        }
+        .banner>.banner3{
+            background-color: green;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/65-mousewheel-h.js"></script>
+</head>
+<body>
+    <div id="mainBanner">
+        <ul class="banner">
+            <li class="banner1">banner1</li>
+            <li class="banner2">banner2</li>
+            <li class="banner3">banner3</li>
+        </ul>
+    </div>
+</body>
+</html>

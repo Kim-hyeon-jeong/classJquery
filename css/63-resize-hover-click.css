@@ -1,0 +1,22 @@
+#nav{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#nav>li{
+    padding: 0 50px;
+    position:relative;
+}
+#nav>li>a{
+    font-size: 20px;
+    font-weight: bold;
+}
+.sub{
+    line-height: 2;
+    font-size: 15px;
+    background-color: pink;
+    position: absolute;
+    width:100%;
+    left:0;
+    display: none;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //선택한 요소를 대체 시킬때 사용
+            //.text1의 내용물을 오늘은 화요일로 대체시키기 : 선택자가 앞에
+            $(".text1").replaceWith("<em>오늘은 화요일!</em>");
+            
+            //.text2의 내일은 수요일 : 선택자가 뒤에
+            $("<strong>내일은 수요일</strong>").replaceAll(".text2");
+        })
+    </script>
+</head>
+<body>
+    <h1>replaceWith</h1>
+    <p class="text1">선택한 요소를 대체 시킬때 사용</p>
+
+    <h1>replaceAll</h1>
+    <p class="text2">선택한 요소를 대체 시킬때 사용</p>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+
+        #nav{
+            display: flex;
+            justify-content: center;
+        }
+        #nav>li{
+            margin: 0 30px; 
+            list-style: none;
+        }
+        #nav>li>a{
+            text-decoration: none;
+            color:#333;
+        }
+        #nav>li>a:hover,
+        #nav>.active>a{
+            text-decoration: underline;
+            color:deepskyblue;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#nav>li").click(function(){
+                $(this).addClass("active");
+                $(this).siblings().removeClass("active");
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul id="nav">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+    </ul>
+</body>
+</html>

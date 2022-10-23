@@ -1,0 +1,55 @@
+#mainBanner{
+    position:relative;
+    width:100%;
+    height:440px;
+    /* height는 반응형시 그림 같이 줄어들게하는거할땐 안씀 아래에 img
+    에 3줄쓴 다음에 height써줬음 마지막에 */
+    overflow: hidden;
+}
+.banner>li{
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    display: none;
+}
+.banner>.b1{
+   display: block;
+}
+
+.pager{
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    margin-left:500px;
+    display: flex;
+}
+.pager>li{
+    margin-left:10px;
+}
+.pager>li>a{
+    display: block;
+    width:10px;
+    height:10px;
+    background: white;
+    border-radius: 10px;
+    transition:0.5s;
+}
+.pager>.active>a{
+    width:30px;
+    background: yellow;
+}
+.arrow>a{
+    position:absolute;
+    top:50%;
+    width:50px;
+    height: 50px;
+    background-image: url(../images/icon_event_slider_arr.png);
+}
+.arrow>.leftArrow{
+    left:20px;
+    background-position: 0 -50px;
+}
+.arrow>.rightArrow{
+    right:20px;
+    background-position: -50px -50px;
+}
